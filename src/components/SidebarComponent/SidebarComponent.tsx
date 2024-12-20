@@ -20,26 +20,13 @@ const SidebarComponent:FC = () => {
 
 
             <div className="flex flex-col items-center mt-6 gap-5">
-
                 <div className="flex flex-col items-center w-[75px] h-[69px] px-0 py-2 gap-2">
-                    <div
-                        className="flex items-center justify-center w-[18px] h-[17px] border-2 border-[#747678] rounded-full">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.5 13V12M12.5 13V10M16.5 13V8M8.5 21L12.5 17L16.5 21M3.5 4H21.5M4.5 4H20.5V16C20.5 16.2652 20.3946 16.5196 20.2071 16.7071C20.0196 16.8946 19.7652 17 19.5 17H5.5C5.23478 17 4.98043 16.8946 4.79289 16.7071C4.60536 16.5196 4.5 16.2652 4.5 16V4Z"
+                            stroke="#747678" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
 
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="w-4 h-4 text-[#747678]"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            strokeWidth={2}
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M4 6h16M4 12h16m-7 6h7"
-                            />
-                        </svg>
-                    </div>
                     <span
                         className="text-[12px] font-normal text-[#747678] leading-[14.52px] tracking-[0.2px] text-center">
                         Overview
@@ -49,24 +36,18 @@ const SidebarComponent:FC = () => {
 
                 <div
                     className="flex flex-col items-center w-[75px] h-[69px] px-1 py-2 gap-2 bg-[#202020] rounded-[12px]">
-                    <div
-                        className="flex items-center justify-center w-[16px] h-[16px] border-2 border-[#FFFFFF] rounded-full">
-
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="w-4 h-4 text-[#FFFFFF]"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            strokeWidth={2}
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M4 6h16M4 12h16m-7 6h7"
-                            />
-                        </svg>
-                    </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-[20px] h-[20px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#FFFFFF"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    >
+                        <path d="M3 3h7v7H3V3zM14 3h7v7h-7V3zM3 14h7v7H3v-7zM14 14h7v7h-7v-7z"/>
+                    </svg>
                     <span
                         className="text-[12px] font-normal text-[#FFFFFF] leading-[14.52px] tracking-[0.2px] text-center">
                         AI Tools
