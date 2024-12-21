@@ -24,12 +24,7 @@ const CopyToClipboardComponent:FC<CopyToClipboardButtonProps> = ({text}) => {
             onClick={handleCopy}
             className={`w-full h-[64px] px-10 py-3 ${
                 isCopied ? "bg-[#28a745]" : "bg-[#202020]"
-            } text-white text-[16px] font-normal leading-[21.6px] tracking-[0.01em] rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 mt-6`}
-            style={{
-                textAlign: "center",
-                textUnderlinePosition: "from-font",
-                textDecorationSkipInk: "none",
-            }}
+            } text-white text-[16px] font-normal leading-[21.6px] text-center tracking-[0.01em] rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 mt-6`}
         >
             {isCopied ? "Copied!" : "Copy"}
         </button>

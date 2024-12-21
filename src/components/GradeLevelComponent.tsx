@@ -1,16 +1,11 @@
-import {FC, useState} from "react";
+import {ChangeEvent, FC, useState} from "react";
+import SvgComponent from "./SvgComponent/SvgComponent.tsx";
+import {grades} from "../constants/constants.ts";
 
 const GradeLevelComponent:FC = () => {
     const [selectedGrade, setSelectedGrade] = useState<string>("1st Grade");
 
-    const grades = [
-        "1st",
-        "2nd",
-        "3rd",
-        "4th",
-    ];
-
-    const handleGradeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const handleGradeChange = (event: ChangeEvent<HTMLSelectElement>) => {
         setSelectedGrade(event.target.value);
     };
 
@@ -18,14 +13,8 @@ const GradeLevelComponent:FC = () => {
         <div className="w-full">
             <label
                 htmlFor="grade-select"
-                className="block text-sm font-medium text-[#202020] mb-2"
-                style={{
-                    fontSize: "16px",
-                    fontWeight: 600,
-                    lineHeight: "21.6px",
-                    letterSpacing: "0.01em",
-                    textAlign: "left",
-                }}
+                className="block text-[16px] font-semibold leading-[21.6px] tracking-[0.01em] text-[#202020] text-left mb-2"
+
             >
                 Grade level:
             </label>
@@ -35,9 +24,6 @@ const GradeLevelComponent:FC = () => {
                     value={selectedGrade}
                     onChange={handleGradeChange}
                     className="w-full h-[64px] px-6 py-4 text-[16px] font-normal text-[#202020] bg-gray-50 border border-[#F3F3F3] rounded-[40px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none"
-                    style={{
-                        //fontFamily: "Inter",
-                    }}
                 >
                     {grades.map((grade) => (
                         <option key={grade} value={grade}>
@@ -46,11 +32,15 @@ const GradeLevelComponent:FC = () => {
                     ))}
                 </select>
                 <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 9L12 16L5 9" stroke="#202020" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round"/>
-                    </svg>
-
+                    <SvgComponent
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#202020"
+                        strokeWidth="2"
+                        pathData="M19 9L12 16L5 9"
+                    />
                 </div>
             </div>
         </div>

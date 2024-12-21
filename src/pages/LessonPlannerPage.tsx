@@ -13,7 +13,6 @@ const LessonPlannerPage = () => {
     const handleFormSubmit = async (data: { topic: string; duration: string }) => {
         try {
             const result = await generateLessonPlan(data);
-
             setResponse(result);
         } catch (error) {
             console.error("Error fetching lesson plan:", error);
